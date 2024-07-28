@@ -23,7 +23,7 @@ class UserRepository {
 
     async get(id) {
         try {
-            const response = await User.findById(id);
+            const response = await User.findById(id).lean();
             return response;
         } catch (error) {
             console.log("Something went wrong in repository layer.");

@@ -14,10 +14,10 @@ const startAndStopServer = async () => {
     app.listen(PORT, () => {
         console.log(`Server started at Port: ${PORT}`);
     });
-
-    // const repo = new repository();
-    // const user = await repo.create({name: 'krishna', email: 'd@e.com'});
-    // console.log(user);
+    
+    const repo = new repository();
+    const response = await repo.get('66a5bb55d63e04ead9d75060');
+    console.log(response);
 }
 
 startAndStopServer();
