@@ -31,6 +31,16 @@ class UserRepository {
         }
     }
 
+    async getAll(offset, limit) {
+        try {
+            const response = await User.find().skip(offset).limit(limit);
+            return response;
+        } catch (error) {
+            console.log("Something went wrong in repository layer.");
+            console.log(error);
+        }
+    }
+
     async update(user, data) {
         try {
             const response = await User.findOneAndUpdate(user._id, data, {new: true});

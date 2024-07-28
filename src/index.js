@@ -16,7 +16,8 @@ const startAndStopServer = async () => {
     });
     
     const repo = new repository();
-    const response = await repo.get('66a5bb55d63e04ead9d75060');
+    // const response = await repo.get('66a5bb55d63e04ead9d75060');
+    const response = await repo.getAll(0,2);
     console.log(response);
 }
 
