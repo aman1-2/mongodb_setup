@@ -17,8 +17,10 @@ const startAndStopServer = async () => {
     
     const repo = new repository();
     // const response = await repo.get('66a5bb55d63e04ead9d75060');
-    const response = await repo.getAll(0,5);
-    console.log(response[2].userNameWithEmail);
+    // const response = await repo.getAll(0,5);
+    // console.log(response[2].userNameWithEmail);
+    // const newUser = await repo.create({name: 'Aman', email: 'r@u.com'});
+    // console.log(newUser);
 }
 
 startAndStopServer();
